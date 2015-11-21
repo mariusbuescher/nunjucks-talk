@@ -6,7 +6,15 @@
     "type": "git",
     "url": "https://github.com/mariusbuescher/nunjucks-talk.git"
   },
+  "scripts": {
+    "jshint": "jshint src/ grunt/ Gruntfile.js",
+    "jscs": "jscs src/ grunt/ Gruntfile.js"
+  },
   "main": "index.js",
   "author": "Marius Büscher <marius.buescher@denkwerk.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jscs": "^2.6.0",
+    "jshint": "^2.8.0"
+  }
 }
