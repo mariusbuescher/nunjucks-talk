@@ -2,6 +2,10 @@
   "name": "nunjucks-talk",
   "version": "1.0.0",
   "description": "Nunjucks und der Nunjuckr: Wie wir statische Seiten mit Grunt generieren",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariusbuescher/nunjucks-talk.git"
+  },
   "main": "index.js",
   "author": "Marius Büscher <marius.buescher@denkwerk.com>",
   "license": "MIT"
