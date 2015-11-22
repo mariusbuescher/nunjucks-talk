@@ -1,8 +1,8 @@
 {% extends 'site/layouts/default.njs' %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-<p>{{ content }}</p>
+
+{% include 'pattern/site-header/site-header.njs' %}
 
 <h2>Globale Funktion:</h2>
 <p>{{ globalFunction() }}</p>
