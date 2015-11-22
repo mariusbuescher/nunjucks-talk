@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Nunjucks Talk</title>
-</head>
-<body>
+{% extends 'site/layouts/default.njs' %}
 
-    <h1>{{ title }}</h1>
-    <p>{{ content }}</p>
+{% block content %}
+<h1>{{ title }}</h1>
+<p>{{ content }}</p>
 
-    <h2>Globale Funktion:</h2>
-    <p>{{ globalFunction() }}</p>
-
-</body>
-</html>
+<h2>Globale Funktion:</h2>
+<p>{{ globalFunction() }}</p>
+{% endblock %}

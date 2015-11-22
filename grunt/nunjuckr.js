@@ -10,6 +10,7 @@ module.exports = function( grunt, options ) {
             options: {
                 data: grunt.file.readJSON( options.srcPath + '_data/data.json' ),
                 ext: '.html',
+                searchPaths: options.srcPath + 'components',
                 setUp: function( env ) {
 
                     env.addGlobal( 'globalFunction', function() {
