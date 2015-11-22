@@ -1,4 +1,5 @@
 {% extends 'site/layouts/default.njs' %}
+{% import 'pattern/list/lists.njs' as lists %}
 
 {% block content %}
 
@@ -7,9 +8,5 @@
 <h2>Globale Funktion:</h2>
 <p>{{ globalFunction() }}</p>
 
-<ul>
-    {% for item in list %}
-    <li>{{ loop.index }}: {{ item }}</li>
-    {% endfor %}
-</ul>
+{{ lists.list( list ) }}
 {% endblock %}
