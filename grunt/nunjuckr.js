@@ -8,9 +8,12 @@ module.exports = function( grunt, options ) {
     return {
         beispiel: {
             options: {
-                data: grunt.file.readJSON( options.srcPath + '_data/data.json' ),
+                data: {},
                 ext: '.html',
                 searchPaths: options.srcPath + 'components',
+                contentDimensions: {
+                    lang: [ 'de', 'en' ]
+                },
                 setUp: function( env ) {
 
                     env.addGlobal( 'globalFunction', function() {
@@ -22,13 +25,15 @@ module.exports = function( grunt, options ) {
                     } );
 
                     return env;
+                },
+                preprocessData: function( data, file, contentDimensions ) {
+                    data = grunt.file.readJSON( options.srcPath + '_data/' + contentDimensions.lang + '.json' );
+                    return data;
                 }
             },
             files: [
                 {
-                    expand: true,
-                    cwd: '<%= srcPath %>components/site/templates',
-                    src: '**/*.njs',
+                    src: '<%= srcPath %>components/site/templates/**/*.njs',
                     dest: '<%= distPath %>',
                     ext: '.html'
                 }
