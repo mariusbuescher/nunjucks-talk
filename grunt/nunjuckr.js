@@ -9,7 +9,15 @@ module.exports = function( grunt, options ) {
         beispiel: {
             options: {
                 data: grunt.file.readJSON( options.srcPath + '_data/data.json' ),
-                ext: '.html'
+                ext: '.html',
+                setUp: function( env ) {
+
+                    env.addGlobal( 'globalFunction', function() {
+                        return 'I am a global function';
+                    } );
+
+                    return env;
+                }
             },
             files: [
                 {

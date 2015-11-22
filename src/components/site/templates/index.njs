@@ -9,5 +9,8 @@
     <h1>{{ title }}</h1>
     <p>{{ content }}</p>
 
+    <h2>Globale Funktion:</h2>
+    <p>{{ globalFunction() }}</p>
+
 </body>
 </html>
