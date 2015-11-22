@@ -25,7 +25,8 @@ module.exports = function( grunt, options ) {
                     expand: true,
                     cwd: '<%= srcPath %>components/site/templates',
                     src: '**/*.njs',
-                    dest: '<%= distPath %>'
+                    dest: '<%= distPath %>',
+                    ext: '.html'
                 }
             ]
         }
