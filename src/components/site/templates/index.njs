@@ -6,4 +6,10 @@
 
 <h2>Globale Funktion:</h2>
 <p>{{ globalFunction() }}</p>
+
+<ul>
+    {% for item in list %}
+    <li>{{ loop.index }}: {{ item }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
