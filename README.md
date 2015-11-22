@@ -168,3 +168,6 @@ Inhalte
 {% endfilter %}
 ````
 
+### Extensions
+
+Extensions sind z. B. `for` Schleifen oder `if` Abfragen. Es können aber auch eigene Tags registriert werden. Hierzu finden sich Informationen in der [Dokumentation](http://mozilla.github.io/nunjucks/api.html#custom-tags).
