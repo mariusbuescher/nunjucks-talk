@@ -8,5 +8,11 @@
 <h2>Globale Funktion:</h2>
 <p>{{ globalFunction() }}</p>
 
+<p>
+{% filter shorten( 10 ) -%}
+I will be shortended...
+{%- endfilter %}
+</p>
+
 {{ lists.list( list ) }}
 {% endblock %}

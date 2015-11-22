@@ -17,6 +17,10 @@ module.exports = function( grunt, options ) {
                         return 'I am a global function';
                     } );
 
+                    env.addFilter( 'shorten', function( content, count ) {
+                        return content.slice(0, count || 5);
+                    } );
+
                     return env;
                 }
             },
